@@ -22,15 +22,15 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Installing Angular CLI globally
-        run: npm install -g @angular/cli
-
       - name: Installing dependencies
         run: npm ci
         working-directory: cv-app
 
+      - name: Installing Angular CLI globally
+        run: npm install -g @angular/cli
+
       - name: Compile and build
-        run: ng build --base-href=/${{ github.event.repository.name }}/
+        run: npm run build -- --base-href=/${{ github.event.repository.name }}/
         working-directory: cv-app
 
       - name: Publishing to GitHub Pages
