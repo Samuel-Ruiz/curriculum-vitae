@@ -1,0 +1,94 @@
+{
+  "EXPERIENCE": {
+    "TITLE": "Professional Experience",
+    "ITEMS": [
+      {
+        "PERIOD": "July – December 2017",
+        "ROLE": "Project Engineer",
+        "COMPANY": "Tech on Rails",
+        "DESCRIPTION": "Worked on Siemens projects developing train simulation systems."
+      },
+      {
+        "PERIOD": "December 2017 – April 2019",
+        "ROLE": "Software Engineer",
+        "COMPANY": "Comunytek",
+        "DESCRIPTION": "Developed full-stack REST API web applications for BBVA's on-premises architecture."
+      },
+      {
+        "PERIOD": "April 2019 – September 2021",
+        "ROLE": "Full-stack Software Engineer",
+        "COMPANY": "Atalanta",
+        "DESCRIPTION": "Developed REST/SOAP APIs for Iberia’s NDC and modernized applications for Meridiano Insurance."
+      },
+      {
+        "PERIOD": "September 2021 – October 2023",
+        "ROLE": "Full-stack Engineer",
+        "COMPANY": "Alten",
+        "DESCRIPTION": "Developed Java and Angular solutions for Amadeus."
+      },
+      {
+        "PERIOD": "October 2023 – Present",
+        "ROLE": "Full-stack Engineer",
+        "COMPANY": "Amadeus",
+        "DESCRIPTION": "Developing Java and Angular software solutions for Amadeus' business."
+      }
+    ]
+  },
+  "EDUCATION": {
+    "TITLE": "Education",
+    "ITEMS": [
+      {
+        "DEGREE": "Degree in Industrial Technology",
+        "INSTITUTION": "Universidad Politécnica de Madrid",
+        "SPECIALIZATION": "Specializing in Electronics and Automation"
+      },
+      {
+        "DEGREE": "Master in Industrial Electronics",
+        "INSTITUTION": "Universidad Politécnica de Madrid",
+        "SPECIALIZATION": "International-English Program"
+      }
+    ]
+  },
+  "SKILLS": {
+    "TITLE": "Technical Skills",
+    "PROGRAMMING_LANGUAGES": [
+      "Java (4 years)",
+      "Angular (3 years)",
+      "JavaScript (2 years)",
+      "Python (6 months)",
+      "C/C++"
+    ],
+    "TECHNOLOGIES": [
+      "Git",
+      "NPM",
+      "Jenkins",
+      "MongoDB",
+      "SQL (Oracle/PostgreSQL)",
+      "Docker",
+      "REST",
+      "SOAP"
+    ],
+    "METHODOLOGIES": [
+      "Design Patterns",
+      "Test Driven Development",
+      "Integration/Unit Testing"
+    ]
+  },
+  "LANGUAGES": {
+    "TITLE": "Languages",
+    "ITEMS": [
+      {
+        "LANGUAGE": "English",
+        "LEVEL": "First Certificate (B2), studying C1 level"
+      },
+      {
+        "LANGUAGE": "Japanese",
+        "LEVEL": "Basic level"
+      },
+      {
+        "LANGUAGE": "French",
+        "LEVEL": "Basic level"
+      }
+    ]
+  }
+}
