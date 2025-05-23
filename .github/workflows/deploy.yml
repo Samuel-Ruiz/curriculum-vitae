@@ -25,12 +25,12 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
 
-      - name: Installing Angular CLI globally
-        run: npm install -g @angular/cli
-
       - name: Installing dependencies
         run: npm ci
         working-directory: cv-app
+
+      - name: Installing Angular CLI globally
+        run: npm install -g @angular/cli
 
       - name: Compile and build
         run: npm run build -- --base-href=/${{ github.event.repository.name }}/
