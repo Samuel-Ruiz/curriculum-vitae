@@ -2,52 +2,58 @@ name: Deploy Angular App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+env:
+  CI: false
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Code checkout
-        uses: actions/checkout@v4
+  build:
 
-      - name: Node setup
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Clear npm cache
-        run: npm cache clean --force
-
-      - name: Installing dependencies
-        run: npm ci
-        working-directory: cv-app
-
-      - name: Installing Angular CLI globally
-        run: npm install -g @angular/cli
-
-      - name: Compile and build
-        run: npm run build -- --base-href=/${{ github.event.repository.name }}/
-        working-directory: cv-app
-
-      - name: Publishing to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: cv-app/dist/cv-app/browser
-
-  deploy:
-    needs: build-and-deploy
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+      pages: 'write'
+      actions: 'write'
+      checks: 'write'
+      deployments: 'write'
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Install dependencies
+        # Using npm ci is generally faster than running npm i because it caches dependencies
+        run: |
+          npm ci
+      - name: Build the app
+        run: |
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: cv-app/dist/cv-app/browser
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

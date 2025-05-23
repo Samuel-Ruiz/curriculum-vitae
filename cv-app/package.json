@@ -1,6 +1,7 @@
 {
   "name": "cv-app",
   "version": "0.0.0",
+  "homepage": "https://samuel-ruiz.github.io/curriculum-vitae",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
