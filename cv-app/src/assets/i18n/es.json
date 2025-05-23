@@ -1,4 +1,11 @@
 {
+  "NAV": {
+    "HOME": "Inicio",
+    "EXPERIENCE": "Experiencia",
+    "EDUCATION": "Educación",
+    "SKILLS": "Habilidades",
+    "LANGUAGES": "Idiomas"
+  },
   "HOME": {
     "TITLE": "Samuel Ruiz Bernardo",
     "BIRTH": "Nacido en Madrid el 03/02/1990",

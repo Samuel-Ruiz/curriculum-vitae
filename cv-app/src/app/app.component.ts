@@ -6,8 +6,17 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <app-header></app-header>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: [`
+    .main-content {
+      min-height: 90vh;
+    }
+  `]
 })
 export class AppComponent {
   title = 'cv-app';
@@ -20,5 +29,4 @@ export class AppComponent {
       translate.use(browserLang.match(/en|es/) ? browserLang : 'en');
     }
   }
-
 }
