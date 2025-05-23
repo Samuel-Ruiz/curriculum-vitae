@@ -4,7 +4,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
-  standalone: true,
   imports: [CommonModule, TranslateModule],
   template: `
     <div class="container mt-5">
@@ -24,4 +23,5 @@ import { TranslateModule } from '@ngx-translate/core';
     </div>
   `
 })
-export class SkillsComponent {}
+export class SkillsComponent {
+}

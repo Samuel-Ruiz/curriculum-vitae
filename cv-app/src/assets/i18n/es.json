@@ -1,4 +1,11 @@
 {
+  "HOME": {
+    "TITLE": "Samuel Ruiz Bernardo",
+    "BIRTH": "Nacido en Madrid el 03/02/1990",
+    "ADDRESS": "Avenida de Cannes 55 - Antibes, Francia",
+    "CONTACT": "Contacto",
+    "EMAIL": "samuelrbernardo@gmail.com"
+  },
   "EXPERIENCE": {
     "TITLE": "Experiencia Profesional",
     "ITEMS": [

@@ -11,7 +11,7 @@ describe('LanguagesComponent', () => {
       imports: [LanguagesComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(LanguagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

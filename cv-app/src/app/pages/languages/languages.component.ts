@@ -4,7 +4,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-languages',
-  standalone: true,
   imports: [CommonModule, TranslateModule],
   template: `
     <div class="container mt-5">

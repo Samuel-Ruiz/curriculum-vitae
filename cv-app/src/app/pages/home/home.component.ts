@@ -3,7 +3,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [
     TranslatePipe
   ],
@@ -14,8 +13,7 @@ import { TranslatePipe } from '@ngx-translate/core';
       <p><i class="fas fa-map-marker-alt"></i> {{ 'HOME.ADDRESS' | translate }}</p>
       <p><i class="fas fa-envelope"></i> {{ 'HOME.EMAIL' | translate }}</p>
     </div>
-  `,
-  styleUrl: './home.component.scss'
+  `
 })
 export class HomeComponent {
 
