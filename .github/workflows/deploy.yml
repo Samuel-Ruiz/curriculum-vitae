@@ -28,8 +28,14 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
 
+      - name: Limpiar caché de npm
+        run: npm cache clean --force
+
+      - name: Instalar Angular CLI globalmente
+        run: npm install -g @angular/cli
+
       - name: Installing dependencies
-        run: npm install
+        run: npm ci
         working-directory: cv-app
 
       - name: Compile and build
