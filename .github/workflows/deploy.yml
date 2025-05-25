@@ -27,11 +27,9 @@ jobs:
 
       - name: Installing dependencies
         run: npm ci
-        working-directory: cv-app
 
       - name: Compile and build
         run: npm run build -- --base-href=/${{ github.event.repository.name }}/
-        working-directory: cv-app
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -39,7 +37,7 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: cv-app/dist/cv-app/browser
+          path: dist/cv-app/browser
 
   deploy:
     needs: build
