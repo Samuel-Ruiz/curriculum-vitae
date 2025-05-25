@@ -27,13 +27,9 @@ jobs:
 
       - name: Installing dependencies
         run: npm ci
-        with:
-          path: cv-app
 
       - name: Compile and build
         run: npm run build -- --base-href=/${{ github.event.repository.name }}/
-        with:
-          path: cv-app
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
