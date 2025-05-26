@@ -65,14 +65,10 @@
   },
   "SKILLS": {
     "TITLE": "Technical Skills",
-    "PROGRAMMING_LANGUAGES": [
-      "Java (4 years)",
-      "Angular (3 years)",
-      "JavaScript (2 years)",
-      "Python (6 months)",
-      "C/C++"
-    ],
-    "TECHNOLOGIES": [
+    "PROGRAMMING_LANGUAGES_TITLE": "Programming Languages",
+    "PROGRAMMING_LANGUAGES_VALUES": "{{skill}} ({{years}})",
+    "TECHNOLOGIES_TITLE": "Technologies",
+    "TECHNOLOGIES_VALUES": [
       "Git",
       "NPM",
       "Jenkins",
@@ -82,7 +78,8 @@
       "REST",
       "SOAP"
     ],
-    "METHODOLOGIES": [
+    "METHODOLOGIES_TITLE": "Methodologies",
+    "METHODOLOGIES_VALUES": [
       "Design Patterns",
       "Test Driven Development",
       "Integration/Unit Testing"

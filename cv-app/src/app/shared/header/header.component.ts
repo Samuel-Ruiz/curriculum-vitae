@@ -30,6 +30,9 @@ import { CommonModule } from '@angular/common';
         </ul>
       </div>
       <div class="navbar-right">
+        <button class="download-btn" (click)="downloadPDF()">
+          <i class="fas fa-file-pdf"></i>
+        </button>
         <button (click)="switchLanguage()" class="lang-switch">
           <i class="fas fa-globe"></i> {{ currentLang.toUpperCase() }}
         </button>
@@ -90,6 +93,26 @@ import { CommonModule } from '@angular/common';
     .lang-switch:hover {
       color: #000000;
     }
+    .download-btn {
+      background-color: #e63946;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .download-btn i {
+      font-size: 1.2rem;
+    }
+    .download-btn:hover {
+      background-color: #d62828;
+    }
   `]
 })
 export class HeaderComponent {
@@ -100,5 +123,12 @@ export class HeaderComponent {
   switchLanguage() {
     this.currentLang = this.currentLang === 'es' ? 'en' : 'es';
     this.translate.use(this.currentLang);
+  }
+
+  downloadPDF() {
+    const link = document.createElement('a');
+    link.href = `assets/cv/${this.currentLang}.pdf`;
+    link.download = `Samuel_Ruiz_${this.currentLang}_CV.pdf`;
+    link.click();
   }
 }
