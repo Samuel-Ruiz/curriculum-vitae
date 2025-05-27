@@ -64,30 +64,49 @@
     ]
   },
   "SKILLS": {
-    "TITLE": "Habilidades Técnicas",
-    "PROGRAMMING_LANGUAGES_TITLE": "Lenguajes de Programación",
-    "PROGRAMMING_LANGUAGES_VALUES": "{{skill}} ({{years}})",
-    "TECHNOLOGIES_TITLE": "Tecnologías",
-    "TECHNOLOGIES_VALUES": [
-      "Git",
-      "NPM",
-      "Jenkins",
-      "MongoDB",
-      "SQL (Oracle/PostgreSQL)",
-      "Docker",
-      "REST",
-      "SOAP"
-    ],
-    "METHODOLOGIES_TITLE": "Metodologías",
-    "METHODOLOGIES_VALUES": [
-      "Patrones de Diseño",
-      "Desarrollo Guiado por Pruebas",
-      "Pruebas de Integración/Unitarias"
-    ]
+    "TITLE": "Technical Skills",
+    "CATEGORIES": {
+      "PROGRAMMING_LANGUAGES": "Programming Languages",
+      "FRAMEWORKS": "Frameworks & Libraries",
+      "TOOLS": "Tools & Technologies",
+      "METHODOLOGIES": "Methodologies"
+    },
+    "PROGRAMMING_LANGUAGES": {
+      "JAVA": "Java",
+      "TYPESCRIPT": "TypeScript",
+      "JAVASCRIPT": "JavaScript",
+      "PYTHON": "Python"
+    },
+    "FRAMEWORKS": {
+      "ANGULAR": "Angular",
+      "RXJS": "RxJS",
+      "ANGULAR_CLI": "Angular CLI",
+      "BOOTSTRAP": "Bootstrap",
+      "JASMINE_KARMA": "Jasmine/Karma"
+    },
+    "TOOLS": {
+      "GIT": "Git",
+      "NPM": "NPM",
+      "JENKINS": "Jenkins",
+      "DOCKER": "Docker",
+      "MONGODB": "MongoDB",
+      "SQL": "SQL (Oracle/PostgreSQL)",
+      "REST_SOAP": "REST/SOAP APIs"
+    },
+    "METHODOLOGIES": {
+      "DESIGN_PATTERNS": "Design Patterns",
+      "TDD": "Test-Driven Development (TDD)",
+      "TESTING": "Integration/Unit Testing",
+      "AGILE": "SCRUM/Agile"
+    }
   },
   "LANGUAGES": {
     "TITLE": "Idiomas",
     "ITEMS": [
+      {
+        "LANGUAGE": "Español",
+        "LEVEL": "Nativo"
+      },
       {
         "LANGUAGE": "Inglés",
         "LEVEL": "First Certificate (B2)"
