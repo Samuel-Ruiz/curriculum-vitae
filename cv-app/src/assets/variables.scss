@@ -1,0 +1,24 @@
+// variables.scss
+
+// Definición de colores personalizados
+$light-coral: #ef767a;
+$celestial-blue: #39a0ed;
+$aquamarine: #36f1cd;
+$earth-yellow: #eeb868;
+$oxford-blue: #011936;
+
+// Asignación a variables de Bootstrap
+$primary: $celestial-blue;
+$secondary: $aquamarine;
+$success: $earth-yellow;
+$danger: $light-coral;
+$dark: $oxford-blue;
+
+// Mapa de colores del tema
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "dark": $dark
+);

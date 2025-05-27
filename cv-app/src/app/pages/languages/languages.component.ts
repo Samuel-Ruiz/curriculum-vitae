@@ -4,34 +4,20 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-languages',
+  standalone: true,
   imports: [CommonModule, TranslateModule],
   template: `
     <div class="container mt-5">
-      <h2>{{ 'LANGUAGES.TITLE' | translate }}</h2>
+      <h2 class="mb-4">{{ 'LANGUAGES.TITLE' | translate }}</h2>
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let lang of ('LANGUAGES.ITEMS' | translate)">
-          <strong>{{ lang.LANGUAGE }}</strong>: {{ lang.LEVEL }}
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+          *ngFor="let lang of ('LANGUAGES.ITEMS' | translate)">
+          <span>{{ lang.LANGUAGE }}</span>
+          <span class="badge bg-primary rounded-pill">{{ lang.LEVEL }}</span>
         </li>
       </ul>
     </div>
-  `,
-  styles: [`
-    .container {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .list-group-item {
-      font-size: 1rem;
-      padding: 0.75rem 1.25rem;
-    }
-  `]
+  `
 })
-export class LanguagesComponent {
-
-}
+export class LanguagesComponent {}

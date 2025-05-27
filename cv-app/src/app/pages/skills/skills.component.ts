@@ -4,54 +4,75 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
+  standalone: true,
   imports: [CommonModule, TranslateModule],
   template: `
     <div class="container mt-5">
       <h2>{{ 'SKILLS.TITLE' | translate }}</h2>
-      <h5>{{ 'SKILLS.PROGRAMMING_LANGUAGES_TITLE' | translate }}</h5>
-      <ul>
-        <li *ngFor="let skill of skills">
-          {{ getTranslatedSkill(skill) }}
-        </li>
-      </ul>
-      <h5>{{ 'SKILLS.TECHNOLOGIES_TITLE' | translate }}</h5>
-      <ul>
-        <li *ngFor="let tech of ('SKILLS.TECHNOLOGIES_VALUES' | translate)">{{ tech }}</li>
-      </ul>
-      <h5>{{ 'SKILLS.METHODOLOGIES_TITLE' | translate }}</h5>
-      <ul>
-        <li *ngFor="let method of ('SKILLS.METHODOLOGIES_VALUES' | translate)">{{ method }}</li>
-      </ul>
+      <div *ngFor="let categoryKey of getCategories()" class="mt-4">
+        <h5>{{ categoryKey | translate }}</h5>
+        <ul class="list-group">
+          <li *ngFor="let skill of getSkillsByCategory(categoryKey)" class="list-group-item d-flex justify-content-between align-items-center">
+            {{ skill.nameKey | translate }}
+            <span *ngIf="getExperienceYears(skill)" class="badge bg-primary rounded-pill">
+              {{ getExperienceYears(skill) }}
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   `
 })
 export class SkillsComponent {
   skills: Skill[] = [
-    { name: 'Java', startDate: '2017-05-01' },
-    { name: 'Angular', startDate: '2018-05-01' },
-    { name: 'TypeScript', startDate: '2018-05-01' },
-    { name: 'JavaScript', startDate: '2018-05-01' },
-    { name: 'Python', totalExperience: 1 }
+    // Lenguajes de Programación
+    { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.JAVA', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', startDate: '2017-05-01' },
+    { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.TYPESCRIPT', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', startDate: '2018-05-01' },
+    { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.JAVASCRIPT', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', startDate: '2018-05-01' },
+    { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.PYTHON', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', totalExperience: 1 },
+
+    // Frameworks y Librerías
+    { nameKey: 'SKILLS.FRAMEWORKS.ANGULAR', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS', startDate: '2017-05-01' },
+    { nameKey: 'SKILLS.FRAMEWORKS.RXJS', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
+    { nameKey: 'SKILLS.FRAMEWORKS.ANGULAR_CLI', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
+    { nameKey: 'SKILLS.FRAMEWORKS.BOOTSTRAP', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
+    { nameKey: 'SKILLS.FRAMEWORKS.JASMINE_KARMA', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
+
+    // Herramientas y Tecnologías
+    { nameKey: 'SKILLS.TOOLS.GIT', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+    { nameKey: 'SKILLS.TOOLS.NPM', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+    { nameKey: 'SKILLS.TOOLS.JENKINS', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+    { nameKey: 'SKILLS.TOOLS.DOCKER', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+    { nameKey: 'SKILLS.TOOLS.MONGODB', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+    { nameKey: 'SKILLS.TOOLS.SQL', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+    { nameKey: 'SKILLS.TOOLS.REST_SOAP', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
+
+    // Metodologías
+    { nameKey: 'SKILLS.METHODOLOGIES.DESIGN_PATTERNS', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' },
+    { nameKey: 'SKILLS.METHODOLOGIES.TDD', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' },
+    { nameKey: 'SKILLS.METHODOLOGIES.TESTING', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' },
+    { nameKey: 'SKILLS.METHODOLOGIES.AGILE', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' }
   ];
 
-  constructor(private translate: TranslateService) {}
-
-  /**
-   * Returns the translated skill with the number of years of experience.
-   * @param skill
-   */
-  getTranslatedSkill(skill: Skill): string {
-    const years = this.getExperienceYears(skill.startDate) ?? this.getNumberOfYearsSince(skill.totalExperience);
-    return this.translate.instant('SKILLS.PROGRAMMING_LANGUAGES_VALUES', { skill: skill.name, years });
+  getCategories(): string[] {
+    return [...new Set(this.skills.map(skill => skill.categoryKey))];
   }
 
-  /**
-   * Calculates the number of years of experience based on the start date.
-   * @param startDate
-   */
-  getExperienceYears(startDate?: string): string | undefined {
+  getSkillsByCategory(categoryKey: string): Skill[] {
+    return this.skills.filter(skill => skill.categoryKey === categoryKey);
+  }
+
+  getExperienceYears(skill: Skill): string | null {
+    const years = this.calculateExperienceYears(skill.startDate) ?? skill.totalExperience;
+    if (years != null) {
+      return years > 0 ? `${years} año${years > 1 ? 's' : ''}` : 'Menos de un año';
+    }
+    return null;
+  }
+
+  private calculateExperienceYears(startDate?: string): number | null {
     if (!startDate) {
-      return undefined;
+      return null;
     }
     const start = new Date(startDate);
     const now = new Date();
@@ -60,20 +81,13 @@ export class SkillsComponent {
     if (m < 0 || (m === 0 && now.getDate() < start.getDate())) {
       years--;
     }
-    return this.getNumberOfYearsSince(years);
-  }
-
-  /**
-   * Returns a string indicating the number of years since a given number.
-   * @param years
-   */
-  getNumberOfYearsSince(years: number = 0): string {
-    return years > 0 ? `${years} year${years > 1 ? 's' : ''}` : 'Less than a year';
+    return years;
   }
 }
 
 interface Skill {
-  name: string;
+  nameKey: string;
+  categoryKey: string;
   startDate?: string;
   totalExperience?: number;
 }
