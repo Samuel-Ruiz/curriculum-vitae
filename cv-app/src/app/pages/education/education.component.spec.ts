@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EducationComponent } from './education.component';
+import { TranslatePipe } from '@ngx-translate/core';
+import { MockPipe } from 'ng-mocks';
 
 describe('EducationComponent', () => {
   let component: EducationComponent;
@@ -8,7 +10,10 @@ describe('EducationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EducationComponent]
+      imports: [
+        EducationComponent,
+        MockPipe(TranslatePipe)
+      ]
     })
     .compileComponents();
 

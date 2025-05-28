@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExperienceComponent } from './experience.component';
+import { TranslatePipe } from '@ngx-translate/core';
+import { MockPipe } from 'ng-mocks';
 
 describe('ExperienceComponent', () => {
   let component: ExperienceComponent;
@@ -8,7 +10,10 @@ describe('ExperienceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExperienceComponent]
+      imports: [
+        ExperienceComponent,
+        MockPipe(TranslatePipe)
+      ]
     })
     .compileComponents();
 
