@@ -64,12 +64,12 @@
     ]
   },
   "SKILLS": {
-    "TITLE": "Technical Skills",
+    "TITLE": "Habilidades Técnicas",
     "CATEGORIES": {
-      "PROGRAMMING_LANGUAGES": "Programming Languages",
-      "FRAMEWORKS": "Frameworks & Libraries",
-      "TOOLS": "Tools & Technologies",
-      "METHODOLOGIES": "Methodologies"
+      "PROGRAMMING_LANGUAGES": "Lenguajes de Programación",
+      "FRAMEWORKS": "Frameworks y Librerías",
+      "TOOLS": "Herramientas y Tecnologías",
+      "METHODOLOGIES": "Metodologías"
     },
     "PROGRAMMING_LANGUAGES": {
       "JAVA": "Java",
@@ -91,13 +91,13 @@
       "DOCKER": "Docker",
       "MONGODB": "MongoDB",
       "SQL": "SQL (Oracle/PostgreSQL)",
-      "REST_SOAP": "REST/SOAP APIs"
+      "REST_SOAP": "APIs REST/SOAP"
     },
     "METHODOLOGIES": {
-      "DESIGN_PATTERNS": "Design Patterns",
-      "TDD": "Test-Driven Development (TDD)",
-      "TESTING": "Integration/Unit Testing",
-      "AGILE": "SCRUM/Agile"
+      "DESIGN_PATTERNS": "Patrones de Diseño",
+      "TDD": "Desarrollo Guiado por Pruebas (TDD)",
+      "TESTING": "Pruebas de Integración/Unitarias",
+      "AGILE": "SCRUM/Ágil"
     }
   },
   "LANGUAGES": {
