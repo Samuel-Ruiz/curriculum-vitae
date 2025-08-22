@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
@@ -49,9 +49,9 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
   styles: []
 })
 export class HeaderComponent {
-  currentLang = this.translate.currentLang || 'es';
+  private translate = inject(TranslateService);
 
-  constructor(private translate: TranslateService) {}
+  currentLang = this.translate.currentLang || 'es';
 
   switchLanguage() {
     this.currentLang = this.currentLang === 'es' ? 'en' : 'es';

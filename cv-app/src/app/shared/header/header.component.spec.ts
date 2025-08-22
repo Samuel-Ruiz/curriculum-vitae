@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
-import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { Mock, MockModule, MockPipe, MockProvider } from 'ng-mocks';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { MockPipe, MockProvider } from 'ng-mocks';
 import { ActivatedRoute } from '@angular/router';
 
 describe('HeaderComponent', () => {
