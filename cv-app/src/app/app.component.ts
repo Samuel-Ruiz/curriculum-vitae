@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { TranslateService } from '@ngx-translate/core';
@@ -19,9 +19,13 @@ import { TranslateService } from '@ngx-translate/core';
   `]
 })
 export class AppComponent {
+  private translate = inject(TranslateService);
+
   title = 'cv-app';
 
-  constructor(private translate: TranslateService) {
+  constructor() {
+    const translate = this.translate;
+
     this.translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
     const browserLang = translate.getBrowserLang();
