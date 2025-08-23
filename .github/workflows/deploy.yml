@@ -30,16 +30,36 @@ jobs:
         run: npm run build -- --base-href=/${{ github.event.repository.name }}/
         working-directory: cv-app
 
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run unit tests
+        run: npm test
+        working-directory: cv-app
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+        working-directory: cv-app
+
+      - name: Run E2E tests
+        run: npm run e2e
+        working-directory: cv-app
+
+  setup-pages:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: cv-app/dist/cv-app/browser
+          path: cv-app/dist/cv-app/browser        
 
   deploy:
-    needs: build
+    needs: setup-pages
     runs-on: ubuntu-latest
     environment:
       name: github-pages
