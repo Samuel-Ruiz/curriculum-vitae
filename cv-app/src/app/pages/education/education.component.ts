@@ -7,12 +7,13 @@ import { TranslatePipe } from '@ngx-translate/core';
   imports: [CommonModule, TranslatePipe],
   template: `
     <div class="container mt-5">
-      <h2>{{ 'EDUCATION.TITLE' | translate }}</h2>
-      <div *ngFor="let item of ('EDUCATION.ITEMS' | translate)">
-        <h5>{{ item.DEGREE }}</h5>
-        <p>{{ item.INSTITUTION }}</p>
-        <p>{{ item.SPECIALIZATION }}</p>
-        <hr>
+      <h2 class="text-center mb-4">{{ 'EDUCATION.TITLE' | translate }}</h2>
+      <div *ngFor="let item of ('EDUCATION.ITEMS' | translate)" class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.DEGREE }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ item.INSTITUTION }}</h6>
+          <p class="card-text">{{ item.SPECIALIZATION }}</p>
+        </div>
       </div>
     </div>
   `

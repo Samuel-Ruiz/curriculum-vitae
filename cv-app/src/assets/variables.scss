@@ -1,24 +1,25 @@
 // variables.scss
 
 // Definición de colores personalizados
-$light-coral: #ef767a;
-$celestial-blue: #39a0ed;
-$aquamarine: #36f1cd;
-$earth-yellow: #eeb868;
-$oxford-blue: #011936;
+$dark-blue: #0d1b2a;
+$field-drab: #6f6866;
+$dark-sea-green: #90a955;
+$ash-gray: #b7b7a7;
+$light-gray: #e0e1dd;
 
 // Asignación a variables de Bootstrap
-$primary: $celestial-blue;
-$secondary: $aquamarine;
-$success: $earth-yellow;
-$danger: $light-coral;
-$dark: $oxford-blue;
+$primary: $dark-sea-green;
+$secondary: $ash-gray;
+$dark: $dark-blue;
+$light: $light-gray;
+$body-bg: $light-gray;
+$body-color: $dark-blue;
+$font-family-base: 'Roboto', sans-serif;
 
 // Mapa de colores del tema
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "success": $success,
-  "danger": $danger,
-  "dark": $dark
+  "dark": $dark,
+  "light": $light
 );

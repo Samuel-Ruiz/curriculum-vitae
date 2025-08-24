@@ -1,4 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 // styles.scss
 
 @import './assets/variables';
 @import 'bootstrap/scss/bootstrap';
+
+// Estilos generales
+body {
+  font-family: $font-family-base;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  background-color: $light;
+  color: $dark;
+}
+
+.card-header {
+  background-color: $dark;
+  color: $light;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.list-group-item {
+  background-color: $light;
+  border-color: $ash-gray;
+  color: $dark;
+}
+
+.badge {
+  background-color: $primary !important;
+  color: $dark !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dark;
+}

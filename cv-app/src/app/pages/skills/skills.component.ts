@@ -8,13 +8,15 @@ import { TranslatePipe } from '@ngx-translate/core';
   imports: [CommonModule, TranslatePipe],
   template: `
     <div class="container mt-5">
-      <h2>{{ 'SKILLS.TITLE' | translate }}</h2>
-      <div *ngFor="let categoryKey of getCategories()" class="mt-4">
-        <h5>{{ categoryKey | translate }}</h5>
-        <ul class="list-group">
+      <h2 class="text-center mb-4">{{ 'SKILLS.TITLE' | translate }}</h2>
+      <div *ngFor="let categoryKey of getCategories()" class="card mt-4">
+        <div class="card-header">
+          <h5>{{ categoryKey | translate }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
           <li *ngFor="let skill of getSkillsByCategory(categoryKey)" class="list-group-item d-flex justify-content-between align-items-center">
             {{ skill.nameKey | translate }}
-            <span *ngIf="getExperienceYears(skill)" class="badge bg-primary rounded-pill">
+            <span *ngIf="getExperienceYears(skill)" class="badge rounded-pill">
               {{ getExperienceYears(skill) }}
             </span>
           </li>
