@@ -17,22 +17,10 @@
     "TITLE": "Professional Experience",
     "ITEMS": [
       {
-        "PERIOD": "July – December 2017",
-        "ROLE": "Project Engineer",
-        "COMPANY": "Tech on Rails",
-        "DESCRIPTION": "Worked on Siemens projects developing train simulation systems."
-      },
-      {
-        "PERIOD": "December 2017 – April 2019",
-        "ROLE": "Software Engineer",
-        "COMPANY": "Comunytek",
-        "DESCRIPTION": "Developed full-stack REST API web applications for BBVA's on-premises architecture."
-      },
-      {
-        "PERIOD": "April 2019 – September 2021",
-        "ROLE": "Full-stack Software Engineer",
-        "COMPANY": "Atalanta",
-        "DESCRIPTION": "Developed REST/SOAP APIs for Iberia’s NDC and modernized applications for Meridiano Insurance."
+        "PERIOD": "October 2023 – Present",
+        "ROLE": "Full-stack Engineer",
+        "COMPANY": "Amadeus",
+        "DESCRIPTION": "Developing Java and Angular software solutions for Amadeus' business."
       },
       {
         "PERIOD": "September 2021 – October 2023",
@@ -41,10 +29,22 @@
         "DESCRIPTION": "Developed Java and Angular solutions for Amadeus."
       },
       {
-        "PERIOD": "October 2023 – Present",
-        "ROLE": "Full-stack Engineer",
-        "COMPANY": "Amadeus",
-        "DESCRIPTION": "Developing Java and Angular software solutions for Amadeus' business."
+        "PERIOD": "April 2019 – September 2021",
+        "ROLE": "Full-stack Software Engineer",
+        "COMPANY": "Atalanta",
+        "DESCRIPTION": "Developed REST/SOAP APIs for Iberia’s NDC and modernized applications for Meridiano Insurance."
+      },
+      {
+        "PERIOD": "December 2017 – April 2019",
+        "ROLE": "Software Engineer",
+        "COMPANY": "Comunytek",
+        "DESCRIPTION": "Developed full-stack REST API web applications for BBVA's on-premises architecture."
+      },
+      {
+        "PERIOD": "July – December 2017",
+        "ROLE": "Project Engineer",
+        "COMPANY": "Tech on Rails",
+        "DESCRIPTION": "Worked on Siemens projects developing train simulation systems."
       }
     ]
   },

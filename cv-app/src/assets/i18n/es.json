@@ -17,22 +17,10 @@
     "TITLE": "Experiencia Profesional",
     "ITEMS": [
       {
-        "PERIOD": "Julio – Diciembre 2017",
-        "ROLE": "Ingeniero de Proyectos",
-        "COMPANY": "Tech on Rails",
-        "DESCRIPTION": "Trabajó en proyectos de Siemens desarrollando sistemas de simulación de trenes."
-      },
-      {
-        "PERIOD": "Diciembre 2017 – Abril 2019",
-        "ROLE": "Ingeniero de Software",
-        "COMPANY": "Comunytek",
-        "DESCRIPTION": "Desarrolló aplicaciones web full-stack REST API para la arquitectura on-premises de BBVA."
-      },
-      {
-        "PERIOD": "Abril 2019 – Septiembre 2021",
-        "ROLE": "Ingeniero de Software Full-stack",
-        "COMPANY": "Atalanta",
-        "DESCRIPTION": "Desarrolló APIs REST/SOAP para el NDC de Iberia y modernizó aplicaciones para Meridiano Seguros."
+        "PERIOD": "Octubre 2023 – Presente",
+        "ROLE": "Ingeniero Full-stack",
+        "COMPANY": "Amadeus",
+        "DESCRIPTION": "Desarrollando soluciones de software en Java y Angular para el negocio de Amadeus."
       },
       {
         "PERIOD": "Septiembre 2021 – Octubre 2023",
@@ -41,10 +29,22 @@
         "DESCRIPTION": "Desarrolló soluciones en Java y Angular para Amadeus."
       },
       {
-        "PERIOD": "Octubre 2023 – Presente",
-        "ROLE": "Ingeniero Full-stack",
-        "COMPANY": "Amadeus",
-        "DESCRIPTION": "Desarrollando soluciones de software en Java y Angular para el negocio de Amadeus."
+        "PERIOD": "Abril 2019 – Septiembre 2021",
+        "ROLE": "Ingeniero de Software Full-stack",
+        "COMPANY": "Atalanta",
+        "DESCRIPTION": "Desarrolló APIs REST/SOAP para el NDC de Iberia y modernizó aplicaciones para Meridiano Seguros."
+      },
+      {
+        "PERIOD": "Diciembre 2017 – Abril 2019",
+        "ROLE": "Ingeniero de Software",
+        "COMPANY": "Comunytek",
+        "DESCRIPTION": "Desarrolló aplicaciones web full-stack REST API para la arquitectura on-premises de BBVA."
+      },
+      {
+        "PERIOD": "Julio – Diciembre 2017",
+        "ROLE": "Ingeniero de Proyectos",
+        "COMPANY": "Tech on Rails",
+        "DESCRIPTION": "Trabajó en proyectos de Siemens desarrollando sistemas de simulación de trenes."
       }
     ]
   },

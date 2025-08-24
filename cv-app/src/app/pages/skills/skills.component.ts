@@ -27,20 +27,17 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class SkillsComponent {
   skills: Skill[] = [
-    // Lenguajes de Programación
     { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.JAVA', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', startDate: '2017-05-01' },
     { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.TYPESCRIPT', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', startDate: '2018-05-01' },
     { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.JAVASCRIPT', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', startDate: '2018-05-01' },
     { nameKey: 'SKILLS.PROGRAMMING_LANGUAGES.PYTHON', categoryKey: 'SKILLS.CATEGORIES.PROGRAMMING_LANGUAGES', totalExperience: 1 },
 
-    // Frameworks y Librerías
     { nameKey: 'SKILLS.FRAMEWORKS.ANGULAR', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS', startDate: '2017-05-01' },
     { nameKey: 'SKILLS.FRAMEWORKS.RXJS', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
     { nameKey: 'SKILLS.FRAMEWORKS.ANGULAR_CLI', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
     { nameKey: 'SKILLS.FRAMEWORKS.BOOTSTRAP', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
     { nameKey: 'SKILLS.FRAMEWORKS.JASMINE_KARMA', categoryKey: 'SKILLS.CATEGORIES.FRAMEWORKS' },
 
-    // Herramientas y Tecnologías
     { nameKey: 'SKILLS.TOOLS.GIT', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
     { nameKey: 'SKILLS.TOOLS.NPM', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
     { nameKey: 'SKILLS.TOOLS.JENKINS', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
@@ -49,7 +46,6 @@ export class SkillsComponent {
     { nameKey: 'SKILLS.TOOLS.SQL', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
     { nameKey: 'SKILLS.TOOLS.REST_SOAP', categoryKey: 'SKILLS.CATEGORIES.TOOLS' },
 
-    // Metodologías
     { nameKey: 'SKILLS.METHODOLOGIES.DESIGN_PATTERNS', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' },
     { nameKey: 'SKILLS.METHODOLOGIES.TDD', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' },
     { nameKey: 'SKILLS.METHODOLOGIES.TESTING', categoryKey: 'SKILLS.CATEGORIES.METHODOLOGIES' },
